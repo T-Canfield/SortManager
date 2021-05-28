@@ -26,7 +26,7 @@ public class BinarySorter implements Sorter{
     @Override
     public int[] sortArray(int[] arrayToSort) throws IllegalArgumentException,NullPointerException {
         if(arrayToSort==null){throw new NullPointerException("Array to sort cannot be null");}
-        int sortOrder = UserInput.getAscendingOrDescending();
+        int sortOrder =UserInput.getAscendingOrDescending();
        int[] output;
        long startTime=Timer.startTimer();
         if (sortOrder==1){

@@ -20,39 +20,6 @@ public class BinarySorterPerformanceTest {
         long endTime = Timer.endTimer();
         Printer.printTimer(Timer.calculateTimeTaken(startTime,endTime));
     }
-    @Test
-    public void performanceTestingWith100ElementsASC(){
-        BinaryTree binaryTree= new BinaryTreeImplementation();
-        while(binaryTree.getNumberOfElements()<100){
-            binaryTree.addElement((int) (Math.random()*(50000+50000)-50000));
-        }
-        long startTime = Timer.startTimer();
-        binaryTree.getSortedTreeAsc();
-        long endTime = Timer.endTimer();
-        Printer.printTimer(Timer.calculateTimeTaken(startTime,endTime));
-    }
-    @Test
-    public void performanceTestingWith1000ElementsASC(){
-        BinaryTree binaryTree= new BinaryTreeImplementation();
-        while(binaryTree.getNumberOfElements()<1000){
-            binaryTree.addElement((int) (Math.random()*(50000+50000)-50000));
-        }
-        long startTime = Timer.startTimer();
-        binaryTree.getSortedTreeAsc();
-        long endTime = Timer.endTimer();
-        Printer.printTimer(Timer.calculateTimeTaken(startTime,endTime));
-    }
-    @Test
-    public void performanceTestingWith10000ElementsASC(){
-        BinaryTree binaryTree= new BinaryTreeImplementation();
-        while(binaryTree.getNumberOfElements()<10000){
-            binaryTree.addElement((int) (Math.random()*(50000+50000)-50000));
-        }
-        long startTime = Timer.startTimer();
-        binaryTree.getSortedTreeAsc();
-        long endTime = Timer.endTimer();
-        Printer.printTimer(Timer.calculateTimeTaken(startTime,endTime));
-    }
 
     @Test
     public void performanceTestingWith1000ElementsDESC(){
