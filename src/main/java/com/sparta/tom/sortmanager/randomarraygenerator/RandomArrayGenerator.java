@@ -6,8 +6,8 @@ public class RandomArrayGenerator {
         int min=3;
         int[] outputArray= new int[(int) (Math.random()*(max-min)+min)];
         int i=0;
-        max=50;
-        min=-50;
+        max=50000;
+        min=-50000;
         for (int element:
              outputArray) {
             outputArray[i++]=(int) (Math.random()*(max-min)+min);
