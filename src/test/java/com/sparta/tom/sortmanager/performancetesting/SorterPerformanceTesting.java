@@ -3,7 +3,6 @@ package com.sparta.tom.sortmanager.performancetesting;
 import com.sparta.tom.sortmanager.binarytree.BinaryTree;
 import com.sparta.tom.sortmanager.binarytree.BinaryTreeImplementation;
 import com.sparta.tom.sortmanager.printer.Printer;
-import com.sparta.tom.sortmanager.sorter.BinarySorter;
 import com.sparta.tom.sortmanager.sorter.BubbleSorter;
 import com.sparta.tom.sortmanager.sorter.MergeSorter;
 import com.sparta.tom.sortmanager.sorter.Sorter;
@@ -11,6 +10,7 @@ import com.sparta.tom.sortmanager.timer.Timer;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class SorterPerformanceTesting {
@@ -121,6 +121,7 @@ public class SorterPerformanceTesting {
                 input[i++] = element;
             }
         }
+        int[] inputCopy= Arrays.copyOf(input,10000);
         Sorter bubbleSorter = new BubbleSorter();
         Sorter mergeSorter = new MergeSorter();
         BinaryTree binarytree = new BinaryTreeImplementation();
@@ -130,7 +131,7 @@ public class SorterPerformanceTesting {
         mergeSorter.sortArray(input);
         System.out.println("For Binary Sort");
         long startTimer = Timer.startTimer();
-        binaryTree.addElements(input);
+        binaryTree.addElements(inputCopy);
         binaryTree.getSortedTreeAsc();
         long endTimer = Timer.startTimer();
         Printer.printTimer(Timer.calculateTimeTaken(startTimer,endTimer));
